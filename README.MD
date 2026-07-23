@@ -1,75 +1,215 @@
-<h1 align="center">
-  <br>
-  Seleksi Warga Basdat 2026 <br>
-  ETL Project
-  <br>
-  <br>
-</h1>
+# Seleksi Tahap 2 Asisten Basis Data 2026 — ETL Project
 
-<h2 align="left">
-  <br>
-  Singkatnya?
-  <br>
-</h2>
-Pada tahap seleksi ini, peserta akan diminta untuk melakukan proses ETL yang meliputi data scraping, database modeling, dan data storing terkait sebuah topik yang dibebaskan kepada peserta. Peserta juga diminta untuk merancang sebuah model ERD dan model relasional yang akan diimplementasikan untuk menyimpan hasil proses data scraping sebelumnya. Tahap seleksi ini menguji kemampuan peserta untuk mengumpulkan data, merancang sebuah database, dan merealisasikan rancangan tersebut menjadi sebuah database relasional yang fungsional.
-  <br>
+## Author
+- **Nama**: Rhenaldy Cahyadi Putra
+- **NIM**: 13524039
 
-## Step 1: Data Scraping
-1. Pilih sebuah topik yang akan kalian jadikan sebagai tema pada seleksi _data scraping_ Anda. Daftarkan topik tersebut ke dalam spreadsheet berikut:
-[Daftar Topik Seleksi Asisten Lab Basis Data 2026](https://docs.google.com/spreadsheets/d/1cowSMPtWQApyALrypfMBJSOuqbXyGh2cCaDXKRs8fD4/edit?usp=sharing)
-    - Usahakan agar tidak ada dua atau lebih peserta dengan topik yang sama
-    - First come, first served. Bila ada dua atau lebih peserta dengan topik yang sama, peserta dengan topik yang sudah terdaftar duluan (berada di atas) akan diprioritaskan.
-    - Akses edit ke _spreadsheet_ topik data scraping akan ditutup pada tanggal **25 Juli pukul 20:40 WIB**
-2. Lakukan _data scraping_ dari sebuah _web page_ untuk memperoleh data dan informasi sesuai dengan topik yang telah dipilih oleh masing-masing peserta. 
-    - Data dan informasi yang diperoleh akan digunakan di _step_ berikutnya sebagai data yang akan disimpan di dalam sebuah RDBMS
-    - Peserta **DILARANG** menggunakan API untuk melakukan proses data scraping
-3. Pada folder `Data Scraping`, peserta harus mengumpulkan file _script_ dan file JSON hasil _scraping_ yang telah dilakukan
-    - Folder `src` berisi _script_/_code_ yang telah digunakan untuk _scraping_. Pastikan bahwa _script_/_code_ yang kalian bua bersifat well documented dan clean. 
-    - Folder `data` berisi semua data dan informasi yang berhasil kalian scrape dalam bentu JSON. Peserta diperbolehkan untuk memisahkan hasil _scraping_ ke dalam file-file yang berbeda ataupun digabung dalam satu file yang besar. Yang penting sesuai dengan output dari _script_ _data scraping_ yang digunakan
-    - Folder `screenshot` berisi tangkapan layar dari _script/code_ yang kalian gunakan untuk _data scraping_. Pastikan tangkapan layar dapat dibaca dengan jelas
-4. Sebagai referensi untuk mempelajari dan mengenal _data scraping_, asisten telah menyiapkan dokumen panduan singkat pada link berikut: Panduan Singkat Data Scraping
-    - Dokumen tersebut hanya merupakan panduan bagi peserta. Metodologi _data scraping_ yang digunakan oleh peserta seleksi basdat dibebaskan (asal sesuai peraturan)
-    - Perhatikan dan peragakan etika _data scraping_ yang baik dalam pelaksanaan seleksi ini
-5. Syarat data yang diperoleh dari proses data scraping: Data yang diperoleh harus di-_preprocessing_ terlebih dahulu
-    - Beberapa contoh _preprocessing_:
-        - Cleaning
-        - Parsing
-        - Transformation
-        - Dll
-    - Preprocessing dilakukan untuk memastikan data yang diterima tidak sepenuh-penuhnya mentah dan tidak dapat dipahami dengan mudah
-  
+## Deskripsi Singkat
 
-## Step 2: Data Modeling + Data Storing
-1. Dari hasil proses _data scraping_ yang telah dilakukan, lakukan perancangan _database_ dalam bentuk **ERD**. Sertakan asumsi dan penjelasan di dalam desain ERD-nya bila diperlukan
-2. Translasikan hasil desain ERD tersebut ke dalam bentuk diagram relasional. Peserta dipersilahkan untuk menambahkan tabel lain yang sekiranya relevan atau berkaitan dengan tabel-tabel yang murni didapatkan dari proses _data scraping_.
-3. Implementasikan skema diagram relasional tersebut ke dalam RDBMS sesuai pilihan peserta (PostgreSQL, mariaDB, etc). Peserta **dilarang** untuk menggunakan DBMS no-SQL
-    - Jangan lupa untuk mengimplementasikan _constraints_ ke dalam _database_ (primary key, foreign key, trigger, dll)
-4. Setelah _database_-nya telah diimplementasikan, masukkan data yang didapatkan dari proses _scraping_ ke dalam RDBMS yang telah dibuat
-    - Tabel tambahan yang dibuat pada poin 2 tidak perlu diisi dengan data (baik data _dummy_ maupun data asli). Cukup dibiarkan kosong
-5. Tools yang digunakan dibebaskan kepada peserta
-6. Pada folder `Data Storing`, peserta harus mengumpulkan bukti penyimpanan data pada DBMS. Folder `Data Storing` terdiri dari folder `design`, `export`, dan `screenshots`.
-    - Folder `design` berisi gambar ERD dan gambar diagram relasional dari _database_ yang kalian rancang. Format file yang diterima adalah **.png**
-    - Folder `src` berisi script/code yang telah digunakan untuk storing. Pastikan bahwa script/code yang kalian bua bersifat well documented dan clean. 
-    - Folder `export` berisi file hasil _export_ dari DBMS dengan format **.sql**
-    - Folder `screenshots` berisi tangkapan layar bukti dari penyimpanan data ke dalam RDBMS (Query SELECT FROM WHERE pada RDBMS)
+Proyek ini merupakan hasil pengerjaan seleksi tahap 2 Asisten Basis Data 2026, yang meliputi proses **ETL** (*Extract, Transform, Load*): melakukan *data scraping*, merancang model basis data, lalu menyimpan hasilnya ke dalam RDBMS.
 
-## Bonus:
-Task-task berikut merupakan bonus yang **TIDAK WAJIB** dilakukan oleh peserta seleksi. Penyelesaian satu atau lebih dari task bonus akan membawa nilai tambahan bagi peserta yang menyelesaikannya. Peserta dibolehkan untuk mengerjakan sebagian atau seluruh dari task bonus yang tersedia
-1. Buatlah perancangan dan implementasi data warehouse berdasarkan data yang diperoleh dari proses data scraping. Rancanglah skema yang diperlukan untuk fact table dan dimension table (misalnya menggunakan pendekatan star schema atau snowflake schema) untuk mendukung kebutuhan analitik. Sertakan struktur skema data warehouse yang digunakan beserta contoh query analitik yang bisa dijalankan terhadap data tersebut. 
-2. Lakukan automated scheduling untuk keseluruhan proses, sehingga data dapat di-update secara berkala. Pastikan tidak terdapat redundansi data pada DBMS. Jika mengerjakan bonus ini, jelaskan pada README dan cantumkan pada data waktu pelaksanaan scheduling, misalnya dengan menunjukkan perbedaan timestamp ekstraksi antara data pada batch pertama dan data pada batch kedua
+Topik yang diangkat adalah **Taman Nasional Amerika Serikat (National Parks of the United States)**, yang di-*scrape* dari halaman Wikipedia [*List of national parks of the United States*](https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States). Halaman tersebut memuat dua tabel utama yang relevan untuk dijadikan basis data relasional:
 
+1. Daftar 63 taman nasional beserta lokasi (negara bagian), tanggal penetapan, luas area, jumlah pengunjung, status pengakuan UNESCO (*World Heritage Site* / *Biosphere Reserve*), dan deskripsi singkat.
+2. Rekapitulasi jumlah taman nasional per negara bagian/teritori (total, eksklusif, dan yang berbagi dengan negara bagian lain).
 
-# Pengumpulan
-1. Peserta diwajibkan untuk melakukan _fork_ terhadap project [GitHub Seleksi Lab Basdat 2026](https://github.com/wargabasdat/Seleksi-2026-Tugas-1). Peserta harus melakukan _pull request_ dengan nama **TUGAS_SELEKSI_1_[NIM]** sebelum tenggat waktu yang telah ditetapkan
-2. Tambahkan **.gitignore** pada _file_ atau _folder_ yang tidak perlu di-upload. NB: Binary tidak perlu di-upload
-3. Sertakan file **README** yang memuat:
-    - Author (Nama dan NIM)
-    - Deskripsi singkat mengenai data dan DBMS yang telah dibuat + mengapa kalian memilih topik tersebut
-    - Cara menggunakan scraper yang telah dibuat dan menggunakan hasil output-nya
-    - Penjelasan struktur dari file JSON yang dihasilkan scraper
-    - Struktur ERD dan diagram relasional RDBMS
-    - Penjelasan mengenai proses translasi ERD menjadi diagram relasional
-    - Beberapa screenshot dari program yang dijalankan (image di-upload sesuai folder-folder yang tersedia, di README tinggal ditampilkan)
-    - Referensi (library yang digunakan, link halaman web yang di-scrape, etc)
-  
-# DEADLINE PENGUMPULAN ADALAH TANGGAL 23 Juli 2026, PUKUL 22:40
+Topik ini dipilih karena datanya terstruktur dalam bentuk tabel HTML yang jelas namun tetap memerlukan proses pembersihan (menghapus catatan kaki, simbol UNESCO, memisahkan nama negara bagian, mem-parsing angka luas area dan jumlah pengunjung), serta memiliki relasi yang natural untuk dimodelkan secara relasional (taman ↔ negara bagian bersifat *many-to-many*, taman ↔ status UNESCO juga *many-to-many*, dan taman ↔ data kunjungan tahunan bersifat *one-to-many*).
+
+Basis data diimplementasikan menggunakan **PostgreSQL**.
+
+## Cara Menggunakan Scraper
+
+Script scraper berada di `Data_Scraping/src/scrape_national_parks.py`.
+
+1. Install dependency yang dibutuhkan:
+   ```bash
+   pip install requests beautifulsoup4
+   ```
+2. Jalankan script dari folder `Data_Scraping/src`:
+   ```bash
+   python scrape_national_parks.py
+   ```
+3. Script akan:
+   - Mengambil (fetch) halaman Wikipedia target.
+   - Mem-parsing dua tabel `wikitable` pertama pada halaman tersebut (tabel daftar taman dan tabel rekap per negara bagian).
+   - Melakukan *preprocessing* pada teks mentah (menghapus referensi/catatan kaki `[1]`, simbol penanda UNESCO `*`/`†`/`‡`, merapikan spasi berlebih, memisahkan daftar negara bagian, mem-parsing angka luas area dan jumlah pengunjung menjadi tipe numerik, serta mem-parsing status teritori).
+   - Menyimpan hasilnya ke dua file terpisah: `parks.json` dan `states.json` pada folder `Data_Scraping/data`.
+4. Output (`parks.json` dan `states.json`) kemudian digunakan sebagai input pada tahap *storing* (`Data_Storing/src/store_data.py`) untuk dimasukkan ke dalam RDBMS.
+
+## Struktur File JSON Hasil Scraping
+
+### `parks.json`
+Berisi array objek, masing-masing merepresentasikan satu taman nasional:
+
+| Field | Tipe | Keterangan |
+|---|---|---|
+| `name` | string | Nama taman nasional |
+| `is_world_heritage_site` | boolean | Apakah taman berstatus UNESCO World Heritage Site |
+| `is_biosphere_reserve` | boolean | Apakah taman berstatus UNESCO Biosphere Reserve |
+| `states` | array of string | Negara bagian tempat taman berada (bisa lebih dari satu) |
+| `date_established` | string | Tanggal penetapan taman |
+| `area_acres` | number \| null | Luas area taman dalam satuan *acres* |
+| `recreation_visitors` | number \| null | Jumlah kunjungan rekreasi pada tahun data diambil |
+| `description` | string | Deskripsi singkat taman |
+
+Contoh:
+```json
+{
+  "name": "Acadia",
+  "is_world_heritage_site": false,
+  "is_biosphere_reserve": false,
+  "states": ["Maine"],
+  "date_established": "February 26, 1919",
+  "area_acres": 49071.4,
+  "recreation_visitors": 4079318,
+  "description": "Covering most of Mount Desert Island and other coastal islands, ..."
+}
+```
+
+### `states.json`
+Berisi array objek, masing-masing merepresentasikan satu negara bagian/teritori:
+
+| Field | Tipe | Keterangan |
+|---|---|---|
+| `state` | string | Nama negara bagian/teritori |
+| `is_territory` | boolean | Apakah merupakan teritori (bukan negara bagian) |
+| `total_parks` | number | Total taman nasional di wilayah tersebut |
+| `exclusive_parks` | number | Taman yang seluruhnya berada di satu wilayah tersebut |
+| `shared_parks` | number | Taman yang berbagi wilayah dengan negara bagian/teritori lain |
+
+Contoh:
+```json
+{
+  "state": "California",
+  "is_territory": false,
+  "total_parks": 9,
+  "exclusive_parks": 8,
+  "shared_parks": 1
+}
+```
+
+## Struktur ERD dan Diagram Relasional
+
+### Entity Relationship Diagram
+
+![ERD](Data_Storing/design/erd.png)
+
+Entitas yang dirancang:
+- **Park**: entitas utama, menyimpan atribut taman nasional (`park_id`, `name`, `date_established`, `area_acres`, `recreation_visitors`, `description`).
+- **State**: menyimpan negara bagian/teritori (`state_id`, `state_name`, `is_territory`).
+- **Designation**: menyimpan jenis status pengakuan UNESCO (`designation_id`, `designation_name`).
+- **Visit_Record**: menyimpan riwayat data kunjungan per tahun untuk tiap taman (`visit_id`, `park_id`, `visit_year`, `visitor_count`).
+
+Relasi:
+- **Park — State** (*located_in*): relasi *many-to-many*, karena satu taman bisa berada di lebih dari satu state, dan satu state bisa memiliki banyak taman.
+- **Park — Designation** (*has*): relasi *many-to-many*, karena satu taman bisa memiliki lebih dari satu status UNESCO (atau tidak sama sekali), dan satu status bisa dimiliki banyak taman.
+- **Park — Visit_Record** (*recorded*): relasi *one-to-many*, satu taman dapat memiliki banyak catatan kunjungan dari tahun-tahun berbeda.
+
+Asumsi yang digunakan:
+- Data hasil scraping (kolom `recreation_visitors` pada `parks.json`) diasumsikan sebagai catatan kunjungan untuk satu tahun data tertentu (2025), sehingga dimodelkan pada tabel `Visit_Record` agar skema mendukung pencatatan data kunjungan multi-tahun ke depannya meskipun scraping saat ini hanya menghasilkan satu titik data per taman.
+- Tabel `State` pada data hasil scraping merupakan gabungan dari negara bagian yang muncul di `parks.json` maupun `states.json`, karena keduanya berasal dari tabel Wikipedia yang berbeda namun saling melengkapi.
+
+### Diagram Relasional
+
+![Relational Diagram](Data_Storing/design/relational_diagram.png)
+
+## Proses Translasi ERD ke Diagram Relasional
+
+1. Setiap entitas kuat (`Park`, `State`, `Designation`) langsung ditranslasikan menjadi tabel dengan *primary key surrogate* (`..._id SERIAL`), karena entitas tersebut tidak memiliki identitas alami yang aman dijadikan primary key (nama taman/negara bagian tetap diberi constraint `UNIQUE`).
+2. Relasi *many-to-many* (`Park`–`State` dan `Park`–`Designation`) ditranslasikan menjadi tabel penghubung (*bridge table*) tersendiri, yaitu `park_state` dan `park_designation`, masing-masing dengan *composite primary key* dari kedua *foreign key* penyusunnya, sesuai kaidah translasi ERD ke model relasional untuk relasi *many-to-many*.
+3. Relasi *one-to-many* `Park`–`Visit_Record` ditranslasikan dengan menambahkan *foreign key* `park_id` pada tabel `visit_record` (pihak "many"), tanpa memerlukan tabel penghubung tambahan.
+4. Seluruh *foreign key* diberikan `ON DELETE CASCADE` agar konsistensi data tetap terjaga apabila data taman/negara bagian/status dihapus.
+5. Constraint tambahan (`NOT NULL`, `UNIQUE`) diterapkan pada kolom yang secara bisnis tidak boleh kosong atau harus unik (misalnya nama taman, nama negara bagian, dan kombinasi `park_id` + `visit_year` pada `visit_record`).
+
+Skema DDL lengkap dapat dilihat pada `Data_Storing/src/schema.sql`, dan hasil *export* database pada `Data_Storing/export/national_parks.sql`.
+
+## Screenshot Bukti Penyimpanan Data
+
+Query `SELECT ... FROM ... WHERE ...` berikut dijalankan untuk membuktikan bahwa data hasil scraping telah tersimpan pada RDBMS. Script query juga tersedia dalam format `.sql` pada folder `Data_Storing/screenshot`.
+
+**Query National Park dengan luas area lebih dari 50.000 acres**
+```sql
+SELECT name, area_acres, recreation_visitors
+FROM park
+WHERE area_acres > 50000;
+```
+![Query Park](Data_Storing/screenshot/query_park.png)
+
+**Query National Park yang berada di California**
+```sql
+SELECT p.name, s.state_name
+FROM park p
+JOIN park_state ps ON p.park_id = ps.park_id
+JOIN state s ON ps.state_id = s.state_id
+WHERE s.state_name = 'California';
+```
+![Query Park-State](Data_Storing/screenshot/query_park-state.png)
+
+**Query National Park berstatus World Heritage Site**
+```sql
+SELECT p.name, d.designation_name
+FROM park p
+JOIN park_designation pd ON p.park_id = pd.park_id
+JOIN designation d ON pd.designation_id = d.designation_id
+WHERE d.designation_name = 'World Heritage Site';
+```
+![Query Park-Designation](Data_Storing/screenshot/query_park-designation.png)
+
+**Query catatan kunjungan dengan lebih dari 3 juta pengunjung**
+```sql
+SELECT p.name, v.visit_year, v.visitor_count
+FROM visit_record v
+JOIN park p ON v.park_id = p.park_id
+WHERE v.visitor_count > 3000000;
+```
+![Query Visit Record](Data_Storing/screenshot/query_visit-record.png)
+
+## Bonus
+
+Bonus **Data Warehouse** dan **automated scheduling** **tidak dikerjakan** pada pengumpulan ini (folder `Data_Warehouse` disediakan namun masih kosong).
+
+## Struktur Folder
+
+```
+Seleksi-2026-Tugas-1/
+├── Data_Scraping/
+│   ├── src/
+│   │   └── scrape_national_parks.py
+│   └── data/
+│       ├── parks.json
+│       └── states.json
+├── Data_Storing/
+│   ├── design/
+│   │   ├── erd.png
+│   │   └── relational_diagram.png
+│   ├── src/
+│   │   ├── schema.sql
+│   │   └── store_data.py
+│   ├── export/
+│   │   └── national_parks.sql
+│   └── screenshot/
+│       ├── query_park.png / .sql
+│       ├── query_park-state.png / .sql
+│       ├── query_park-designation.png / .sql
+│       └── query_visit-record.png / .sql
+└── Data_Warehouse/          # tidak diimplementasikan
+```
+
+## Penggunaan AI
+
+Sebagian pengerjaan proyek ini dibantu oleh AI, khususnya untuk:
+- Menyusun dan merapikan script scraping dan README.
+
+Bagian yang dikerjakan sendiri:
+- Pemilihan topik, perancangan ERD dan skema relasional, dan penyusunan query pembuktian.
+
+Refleksi: penggunaan AI membantu untuk mengidentifikasi preprocessing yang perlu dilakukan, namun keputusan desain tetap dilakukan secara mandiri.
+
+## Referensi
+
+- Sumber data: [List of national parks of the United States](https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States) — Wikipedia.
+- Library yang digunakan:
+  - [`requests`](https://pypi.org/project/requests/) — melakukan HTTP request ke halaman target.
+  - [`beautifulsoup4`](https://pypi.org/project/beautifulsoup4/) — mem-parsing HTML.
+  - [`psycopg2-binary`](https://pypi.org/project/psycopg2-binary/) — koneksi Python ke PostgreSQL.
+- RDBMS: [PostgreSQL](https://www.postgresql.org/).
