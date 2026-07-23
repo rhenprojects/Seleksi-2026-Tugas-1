@@ -1,9 +1,5 @@
 # Seleksi Tahap 2 Asisten Basis Data 2026 — ETL Project
 
-## Author
-- **Nama**: Rhenaldy Cahyadi Putra
-- **NIM**: 13524039
-
 ## Deskripsi Singkat
 
 Proyek ini merupakan hasil pengerjaan seleksi tahap 2 Asisten Basis Data 2026, yang meliputi proses **ETL** (*Extract, Transform, Load*): melakukan *data scraping*, merancang model basis data, lalu menyimpan hasilnya ke dalam RDBMS.
@@ -203,7 +199,7 @@ Sebagian pengerjaan proyek ini dibantu oleh AI, khususnya untuk:
 Bagian yang dikerjakan sendiri:
 - Pemilihan topik, perancangan ERD dan skema relasional, dan penyusunan query pembuktian.
 
-Refleksi: penggunaan AI membantu untuk mengidentifikasi preprocessing yang perlu dilakukan, namun keputusan desain tetap dilakukan secara mandiri.
+Refleksi: penggunaan AI membantu untuk mengidentifikasi kebutuhan preprocessing yang perlu dilakukan, namun keputusan desain tetap dilakukan secara mandiri.
 
 ## Referensi
 
@@ -213,3 +209,7 @@ Refleksi: penggunaan AI membantu untuk mengidentifikasi preprocessing yang perlu
   - [`beautifulsoup4`](https://pypi.org/project/beautifulsoup4/) — mem-parsing HTML.
   - [`psycopg2-binary`](https://pypi.org/project/psycopg2-binary/) — koneksi Python ke PostgreSQL.
 - RDBMS: [PostgreSQL](https://www.postgresql.org/).
+
+## Author
+- **Nama**: Rhenaldy Cahyadi Putra
+- **NIM**: 13524039
