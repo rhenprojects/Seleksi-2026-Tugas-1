@@ -1,0 +1,226 @@
+[
+  {
+    "state": "California",
+    "is_territory": false,
+    "total_parks": 9,
+    "exclusive_parks": 8,
+    "shared_parks": 1
+  },
+  {
+    "state": "Alaska",
+    "is_territory": false,
+    "total_parks": 8,
+    "exclusive_parks": 8,
+    "shared_parks": 0
+  },
+  {
+    "state": "Utah",
+    "is_territory": false,
+    "total_parks": 5,
+    "exclusive_parks": 5,
+    "shared_parks": 0
+  },
+  {
+    "state": "Colorado",
+    "is_territory": false,
+    "total_parks": 4,
+    "exclusive_parks": 4,
+    "shared_parks": 0
+  },
+  {
+    "state": "Arizona",
+    "is_territory": false,
+    "total_parks": 3,
+    "exclusive_parks": 3,
+    "shared_parks": 0
+  },
+  {
+    "state": "Florida",
+    "is_territory": false,
+    "total_parks": 3,
+    "exclusive_parks": 3,
+    "shared_parks": 0
+  },
+  {
+    "state": "Washington",
+    "is_territory": false,
+    "total_parks": 3,
+    "exclusive_parks": 3,
+    "shared_parks": 0
+  },
+  {
+    "state": "Hawaii",
+    "is_territory": false,
+    "total_parks": 2,
+    "exclusive_parks": 2,
+    "shared_parks": 0
+  },
+  {
+    "state": "New Mexico",
+    "is_territory": false,
+    "total_parks": 2,
+    "exclusive_parks": 2,
+    "shared_parks": 0
+  },
+  {
+    "state": "South Dakota",
+    "is_territory": false,
+    "total_parks": 2,
+    "exclusive_parks": 2,
+    "shared_parks": 0
+  },
+  {
+    "state": "Texas",
+    "is_territory": false,
+    "total_parks": 2,
+    "exclusive_parks": 2,
+    "shared_parks": 0
+  },
+  {
+    "state": "Montana",
+    "is_territory": false,
+    "total_parks": 2,
+    "exclusive_parks": 1,
+    "shared_parks": 1
+  },
+  {
+    "state": "Nevada",
+    "is_territory": false,
+    "total_parks": 2,
+    "exclusive_parks": 1,
+    "shared_parks": 1
+  },
+  {
+    "state": "Wyoming",
+    "is_territory": false,
+    "total_parks": 2,
+    "exclusive_parks": 1,
+    "shared_parks": 1
+  },
+  {
+    "state": "American Samoa",
+    "is_territory": true,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Arkansas",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Indiana",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Kentucky",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Maine",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Michigan",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Minnesota",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Missouri",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "North Dakota",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Ohio",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Oregon",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "South Carolina",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "U.S. Virgin Islands",
+    "is_territory": true,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Virginia",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "West Virginia",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 1,
+    "shared_parks": 0
+  },
+  {
+    "state": "Idaho",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 0,
+    "shared_parks": 1
+  },
+  {
+    "state": "North Carolina",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 0,
+    "shared_parks": 1
+  },
+  {
+    "state": "Tennessee",
+    "is_territory": false,
+    "total_parks": 1,
+    "exclusive_parks": 0,
+    "shared_parks": 1
+  }
+]
