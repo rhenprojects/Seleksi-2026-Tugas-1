@@ -1,5 +1,7 @@
 # Seleksi Tahap 2 Asisten Basis Data 2026 — ETL Project
 
+![Cover Image](Assets/readme_cover_image.jpg)
+
 ## Deskripsi Singkat
 
 Proyek ini merupakan hasil pengerjaan seleksi tahap 2 Asisten Basis Data 2026, yang meliputi proses **ETL** (*Extract, Transform, Load*): melakukan *data scraping*, merancang model basis data, lalu menyimpan hasilnya ke dalam RDBMS.
