@@ -4,7 +4,8 @@
 
 Proyek ini merupakan hasil pengerjaan seleksi tahap 2 Asisten Basis Data 2026, yang meliputi proses **ETL** (*Extract, Transform, Load*): melakukan *data scraping*, merancang model basis data, lalu menyimpan hasilnya ke dalam RDBMS.
 
-Topik yang diangkat adalah **Taman Nasional Amerika Serikat (National Parks of the United States)**, yang di-*scrape* dari halaman Wikipedia [*List of national parks of the United States*](https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States). Halaman tersebut memuat dua tabel utama yang relevan untuk dijadikan basis data relasional:
+Topik awal yang direncanakan dalam proyek ini adalah Data Pemain FIFA World Cup 2026™. Namun, topik tersebut kemudian dialihkan karena terdapat pertimbangan terkait kepatuhan terhadap kebijakan dan ketentuan penggunaan situs sumber. Selain itu, pada saat proyek dimulai, penyelenggaraan FIFA World Cup 2026™ masih berlangsung sehingga data statistik yang tersedia belum bersifat final. Oleh karena itu, 
+topik yang jadinya saya angkat adalah **Taman Nasional Amerika Serikat (National Parks of the United States)**, yang di-*scrape* dari halaman Wikipedia [*List of national parks of the United States*](https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States). Halaman tersebut memuat dua tabel utama yang relevan untuk dijadikan basis data relasional:
 
 1. Daftar 63 taman nasional beserta lokasi (negara bagian), tanggal penetapan, luas area, jumlah pengunjung, status pengakuan UNESCO (*World Heritage Site* / *Biosphere Reserve*), dan deskripsi singkat.
 2. Rekapitulasi jumlah taman nasional per negara bagian/teritori (total, eksklusif, dan yang berbagi dengan negara bagian lain).
