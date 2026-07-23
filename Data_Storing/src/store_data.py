@@ -27,6 +27,7 @@ DATA_DIR = os.path.join(BASE_DIR, "..", "..", "Data_Scraping", "data")
 SCHEMA_FILE = os.path.join(BASE_DIR, "..", "..", "Data_Storing", "src", "schema.sql")
 
 DESIGNATIONS = ["World Heritage Site", "Biosphere Reserve"]
+VISIT_YEAR = 2025
 
 
 def run_schema(cursor):
@@ -83,6 +84,7 @@ def insert_designations(cursor):
 
 
 def insert_parks(cursor, parks_data, state_id_map, designation_id_map):
+    park_id_map = {}
     for park in parks_data:
         cursor.execute(
             """INSERT INTO park
@@ -98,6 +100,7 @@ def insert_parks(cursor, parks_data, state_id_map, designation_id_map):
             )
         )
         park_id = cursor.fetchone()[0]
+        park_id_map[park["name"]] = park_id
 
         # Park <-> State
         for state_name in park["states"]:
@@ -118,6 +121,20 @@ def insert_parks(cursor, parks_data, state_id_map, designation_id_map):
                 "INSERT INTO park_designation (park_id, designation_id) VALUES (%s, %s)",
                 (park_id, designation_id_map["Biosphere Reserve"])
             )
+
+    return park_id_map
+
+
+def insert_visit_records(cursor, parks_data, park_id_map):
+    for park in parks_data:
+        if park["recreation_visitors"] is None:
+            continue
+        park_id = park_id_map[park["name"]]
+        cursor.execute(
+            """INSERT INTO visit_record (park_id, visit_year, visitor_count)
+               VALUES (%s, %s, %s)""",
+            (park_id, VISIT_YEAR, park["recreation_visitors"])
+        )
 
 
 def main():
@@ -144,7 +161,10 @@ def main():
     designation_id_map = insert_designations(cursor)
 
     print("Inserting parks + relationships...")
-    insert_parks(cursor, parks_data, state_id_map, designation_id_map)
+    park_id_map = insert_parks(cursor, parks_data, state_id_map, designation_id_map)
+
+    print("Inserting visit records...")
+    insert_visit_records(cursor, parks_data, park_id_map)
 
     conn.commit()
     print(f"Done. Inserted {len(parks_data)} parks, {len(state_id_map)} states.")
